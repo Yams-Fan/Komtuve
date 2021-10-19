@@ -35,8 +35,7 @@ jobs:
         context: ./simple-api
         
      # Note: tags has to be all lower-case
-        tags:
-${{secrets.DOCKERHUB_USERNAME}}/tp-devops-epf:simple-api
+        tags: ${{secrets.DOCKERHUB_USERNAME}}/tp-devops-epf:simple-api
         push: true
 
     - name: Build image and push database
@@ -47,8 +46,7 @@ ${{secrets.DOCKERHUB_USERNAME}}/tp-devops-epf:simple-api
         context: ./database
         
      # Note: tags has to be all lower-case
-        tags:
-${{secrets.DOCKERHUB_USERNAME}}/tp-devops-epf:database
+        tags: ${{secrets.DOCKERHUB_USERNAME}}/tp-devops-epf:database
         push: true
     - name: Build image and push httpd
 # DO the same for httpd
@@ -58,6 +56,5 @@ ${{secrets.DOCKERHUB_USERNAME}}/tp-devops-epf:database
         context: ./hattpd
         
      # Note: tags has to be all lower-case
-        tags:
-${{secrets.DOCKERHUB_USERNAME}}/tp-devops-epf:httpd
+        tags: ${{secrets.DOCKERHUB_USERNAME}}/tp-devops-epf:httpd
         push: true
